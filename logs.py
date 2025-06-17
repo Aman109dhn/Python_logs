@@ -1,4 +1,5 @@
 from collections import defaultdict
+from collections import Counter
 logs = [
     "[2025-06-16T10:00:00] INFO user1: Started process",
     "[2025-06-16T10:00:01] ERROR user1: Failed to connect",
@@ -16,3 +17,16 @@ for i in logs:
     user_log[l[j][2]]+=1
     j+=1
 print(user_log)
+
+c = 3
+recent_logs = logs[-c:] 
+for i in recent_logs:
+    print(i)
+
+l=Counter()
+for i in logs:
+    parts = i.split()
+    lev = parts[1]
+    l[lev]+=1
+for lev, count in l.items():
+    print(f"{lev}: {count}")
