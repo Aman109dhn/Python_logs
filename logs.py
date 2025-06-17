@@ -30,3 +30,17 @@ for i in logs:
     l[lev]+=1
 for lev, count in l.items():
     print(f"{lev}: {count}")
+j=3
+st=""
+for i in range(0,len(lis)):
+    st+=" ".join(lis[i][3:])+" "
+    di["Messages"].append(st)
+
+key="Started process"
+filterLogs=[]
+for i in lis:
+    mes=" ".join(i[3:])
+    if key in mes:
+        filterLogs.append(i)
+print("FileredLogs = ",filterLogs)
+print(di)
