@@ -30,6 +30,7 @@ class SavingAccount(BankAccount):
 b1 = BankAccount(25000,"Krishn")
 c1 = currentAccount(25000,"Krishn",2000)
 s1 = SavingAccount(25000,"Krishn")
+
 print(f"Account holder's name: {b1.holder} ")
 print(f"Current balance is: {b1.amount}")
 
